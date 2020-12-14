@@ -17,7 +17,7 @@ some SwiftUI code
 
 
 
-<h4 id="placeholder">不可设置placeholder样式</h4>
+<h2 id="placeholder">不可设置placeholder样式</h4>
 SwiftUI早期placeholder可以直接传入Text自定义样式,但是后期修正了这个特性
 
 ```swift
@@ -31,29 +31,30 @@ TextField("请填入昵称", text: .constant(""))
 这意味着placeholder在官方API中不能再修改样式
 
 在[stackoverflow.com](https://stackoverflow.com/questions/57688242/swiftui-how-to-change-the-placeholder-color-of-the-textfield/61041398#61041398)找到两种解决方案:
-1.ZStack放一个Text在TextField下面,根据$text显示/隐藏
-* 最后使用ViewModifier封装[Placeholder](/SwiftUICode/placeholder/PlaceholderSolution.swift)
 
-```
-struct PlaceHolder<T: View>: ViewModifier {
-    var placeHolder: T
-    var show: Bool
-    func body(content: Content) -> some View {
-        ZStack(alignment: .leading) {
-            if show { placeHolder }
-            content
+1. ZStack放一个Text在TextField下面,根据$text显示/隐藏
+    * 最后使用ViewModifier封装[Placeholder](/SwiftUICode/placeholder/PlaceholderSolution.swift)
+
+    ```
+    struct PlaceHolder<T: View>: ViewModifier {
+        var placeHolder: T
+        var show: Bool
+        func body(content: Content) -> some View {
+            ZStack(alignment: .leading) {
+                if show { placeHolder }
+                content
+            }
         }
     }
-}
-```
-```swift
-//solution
-TextField("",text: $text)
-.modifier(PlaceHolder(placeHolder: Text("请填入昵称"), show: text.isEmpty))
-```
+    ```
+    ```swift
+    //solution
+    TextField("",text: $text)
+    .modifier(PlaceHolder(placeHolder: Text("请填入昵称"), show: text.isEmpty))
+    ```
 
-2.使用[第三方框架](https://github.com/siteline/SwiftUI-Introspect)找到`uiTextField`对象后设置`attributedPlaceholder`
-
+2. 使用[第三方框架](https://github.com/siteline/SwiftUI-Introspect)找到`uiTextField`对象后设置`attributedPlaceholder`
+>但是这个框架目前在维护状态...
 
 
 
