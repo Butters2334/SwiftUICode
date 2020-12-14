@@ -22,6 +22,7 @@
 - [不可设置placeholder样式](#placeholder)
 - [下划线样式](#underline)
 - [下拉刷新/上拉加载]()
+- [WebImage](webimage)
 
 
 <h2 id="xcode12">Xcode12</h2>
@@ -106,6 +107,16 @@ Text("自定义样式")
                 .foregroundColor(.blue)
     , alignment: .bottom)
 ```
+
+<h2 id="webimage">WebImage</h2>
+多年的老问题,官方api中不能直接使用image-url给Image赋值,需要额外编写不少的代码
+
+>[不使用第三方](/SwiftUICode/WebImage/SimpleImageDemo.swift)的情况下,可以使用Data(contentsOf: url)下载image.data,之后刷新页面赋值
+
+>第三方[SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI),本地集成之后,使用WebImage来代替Image[实现](/SwiftUICode/WebImage/SDImgeDemo.swift)
+
+>第三方[Kingfisher](https://github.com/onevcat/Kingfisher),本地集成之后,使用KFImage来代替Image实现
+
 
 ## 📎 About
 
