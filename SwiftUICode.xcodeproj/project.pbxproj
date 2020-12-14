@@ -13,6 +13,8 @@
 		4030E10D25873B220049E145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4030E10C25873B220049E145 /* Assets.xcassets */; };
 		4030E11025873B220049E145 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4030E10F25873B220049E145 /* Preview Assets.xcassets */; };
 		4030E11325873B220049E145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4030E11125873B220049E145 /* LaunchScreen.storyboard */; };
+		4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E11E258743360049E145 /* PlaceholderSolution.swift */; };
+		4030E1222587434D0049E145 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4030E1212587434D0049E145 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4030E10F25873B220049E145 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4030E11225873B220049E145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4030E11425873B220049E145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4030E11E258743360049E145 /* PlaceholderSolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderSolution.swift; sourceTree = "<group>"; };
+		4030E1212587434D0049E145 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,8 @@
 		4030E10525873B1F0049E145 /* SwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
-				4030E10625873B1F0049E145 /* AppDelegate.swift */,
-				4030E10825873B1F0049E145 /* SceneDelegate.swift */,
-				4030E10A25873B1F0049E145 /* ContentView.swift */,
-				4030E10C25873B220049E145 /* Assets.xcassets */,
-				4030E11125873B220049E145 /* LaunchScreen.storyboard */,
-				4030E11425873B220049E145 /* Info.plist */,
+				4030E1202587433B0049E145 /* app */,
+				4030E11D258743360049E145 /* placeholder */,
 				4030E10E25873B220049E145 /* Preview Content */,
 			);
 			path = SwiftUICode;
@@ -73,6 +73,28 @@
 				4030E10F25873B220049E145 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4030E11D258743360049E145 /* placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				4030E11E258743360049E145 /* PlaceholderSolution.swift */,
+			);
+			path = placeholder;
+			sourceTree = "<group>";
+		};
+		4030E1202587433B0049E145 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				4030E1212587434D0049E145 /* Default-568h@2x.png */,
+				4030E10625873B1F0049E145 /* AppDelegate.swift */,
+				4030E10825873B1F0049E145 /* SceneDelegate.swift */,
+				4030E10A25873B1F0049E145 /* ContentView.swift */,
+				4030E10C25873B220049E145 /* Assets.xcassets */,
+				4030E11125873B220049E145 /* LaunchScreen.storyboard */,
+				4030E11425873B220049E145 /* Info.plist */,
+			);
+			path = app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4030E11325873B220049E145 /* LaunchScreen.storyboard in Resources */,
+				4030E1222587434D0049E145 /* Default-568h@2x.png in Resources */,
 				4030E11025873B220049E145 /* Preview Assets.xcassets in Resources */,
 				4030E10D25873B220049E145 /* Assets.xcassets in Resources */,
 			);
@@ -146,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */,
 				4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */,
 				4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */,
 				4030E10B25873B1F0049E145 /* ContentView.swift in Sources */,
@@ -288,7 +312,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICode/Preview Content\"";
 				DEVELOPMENT_TEAM = Q36CWUF67A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUICode/Info.plist;
+				INFOPLIST_FILE = SwiftUICode/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICode/Preview Content\"";
 				DEVELOPMENT_TEAM = Q36CWUF67A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUICode/Info.plist;
+				INFOPLIST_FILE = SwiftUICode/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
