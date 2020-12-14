@@ -20,27 +20,27 @@
 - [Xcode12](#xcode12)
 - [PageView](#pageview)
 - [不可设置placeholder样式](#placeholder)
+- [下划线样式](underline)
 - [下拉刷新/上拉加载]()
 
 
+<h2 id="xcode12">Xcode12</h2>
 
-<h2 id="xcode12">Xcode12</h4>
->Xcode12的全新特性@main代表了SwiftUI的完全体,但是最低iOS14支持也意味着至少要用一年时间
->所以老老实实用UIHostingViewController来封装吧
+Xcode12的全新特性@main代表了SwiftUI的完全体,但是最低iOS14支持也意味着至少要用一年时间
+老老实实用UIHostingViewController来封装吧
 
 
 
-<h2 id="pageview">PageView</h4>
+<h2 id="pageview">PageView</h2>
 
 UIScrollView的isPagingEnabled在swiftUI上没有对应实现,需要分页显示的需求可以使用`UIViewControllerRepresentable`或`UIViewRepresentable`来调用UIKit的功能进行封装
 
->关于封装UIkit在油管找到个教学视频,跟着写不难理解[BBCo教学](https://www.youtube.com/watch?v=Gpxs3q5Wy84&t=1135s)
+>关于封装UIkit在油管找到个教学视频,跟着写不难理解 - [BBCo教学](https://www.youtube.com/watch?v=Gpxs3q5Wy84&t=1135s)
 
->使用封装好的[HScrollViewController](/SwiftUICode/placeholder/PageViewSolution.swift)可以很轻松实现PageView
+>使用封装好的[HScrollViewController](/SwiftUICode/pageview/HScrollViewController.swift)可以很轻松实现[左右滑动的效果](/SwiftUICode/pageview/PageViewSolution.swift)
 
 
-
-<h2 id="placeholder">不可设置placeholder样式</h4>
+<h2 id="placeholder">不可设置placeholder样式</h2>
 
 SwiftUI早期placeholder可以直接传入Text自定义样式,但是后期修正了这个特性
 
@@ -81,6 +81,30 @@ TextField("请填入昵称", text: .constant(""))
 >但是这个框架目前在维护状态...
 
 
+<h2 id="underline">下划线样式</h2>
+`Text`可以调用`underline`设置下划线,但是只能设置Color
+>
+```swift
+Text("标准下划线").underline()
+Text("标准下划线设置颜色").underline(true, color: .red)
+Text("标准下划线隐藏").underline(false)
+```
+
+提出问题的人不多,可能是因为比较容易处理
+>
+```swift
+//StrokeStyle设置为虚线
+//alignments设置为在原先view的下面
+//offset定义间距
+Text("自定义样式")
+.overlay(
+    Rectangle()
+    .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+    .frame(height: 1)
+    .offset(y: 4)
+    .foregroundColor(.blue)
+, alignment: .bottom)
+```
 
 ## 📎 About
 

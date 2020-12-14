@@ -17,6 +17,7 @@
 		4030E1222587434D0049E145 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4030E1212587434D0049E145 /* Default-568h@2x.png */; };
 		4030E12525874EA90049E145 /* PageViewSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E12425874EA90049E145 /* PageViewSolution.swift */; };
 		4030E127258753730049E145 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E126258753730049E145 /* HScrollViewController.swift */; };
+		4030E12A25875C170049E145 /* UnderlineSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E12925875C170049E145 /* UnderlineSolution.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4030E1212587434D0049E145 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4030E12425874EA90049E145 /* PageViewSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewSolution.swift; sourceTree = "<group>"; };
 		4030E126258753730049E145 /* HScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		4030E12925875C170049E145 /* UnderlineSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineSolution.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		4030E10525873B1F0049E145 /* SwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				4030E12825875C060049E145 /* underline */,
 				4030E12325874E870049E145 /* pageView */,
 				4030E1202587433B0049E145 /* app */,
 				4030E11D258743360049E145 /* placeholder */,
@@ -109,6 +112,14 @@
 				4030E12425874EA90049E145 /* PageViewSolution.swift */,
 			);
 			path = pageView;
+			sourceTree = "<group>";
+		};
+		4030E12825875C060049E145 /* underline */ = {
+			isa = PBXGroup;
+			children = (
+				4030E12925875C170049E145 /* UnderlineSolution.swift */,
+			);
+			path = underline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				4030E12525874EA90049E145 /* PageViewSolution.swift in Sources */,
 				4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */,
 				4030E127258753730049E145 /* HScrollViewController.swift in Sources */,
+				4030E12A25875C170049E145 /* UnderlineSolution.swift in Sources */,
 				4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */,
 				4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */,
 				4030E10B25873B1F0049E145 /* ContentView.swift in Sources */,
