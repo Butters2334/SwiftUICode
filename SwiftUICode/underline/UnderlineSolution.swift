@@ -28,6 +28,14 @@ struct UnderlineSolution: View {
                         .offset(y: 4)
                         .foregroundColor(.blue)
                     , alignment: .bottom)
+            
+            //直接绘制虚线
+            Path{ path in
+                path.move(to: CGPoint(x: 20, y: 300))
+                path.addLine(to: CGPoint(x: 200, y: 300))
+            }
+            .stroke(style: StrokeStyle( lineWidth: 10, dash: [5]))
+            .foregroundColor(Color(UIColor.blue))
         }
     }
 }

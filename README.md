@@ -20,7 +20,7 @@
 - [Xcode12](#xcode12)
 - [PageView](#pageview)
 - [不可设置placeholder样式](#placeholder)
-- [下划线样式](underline)
+- [下划线样式](#underline)
 - [下拉刷新/上拉加载]()
 
 
@@ -82,7 +82,8 @@ TextField("请填入昵称", text: .constant(""))
 
 
 <h2 id="underline">下划线样式</h2>
-`Text`可以调用`underline`设置下划线,但是只能设置Color
+Text可以调用underline设置下划线,但是只能设置Color
+
 >
 ```swift
 Text("标准下划线").underline()
@@ -97,13 +98,13 @@ Text("标准下划线隐藏").underline(false)
 //alignments设置为在原先view的下面
 //offset定义间距
 Text("自定义样式")
-.overlay(
-    Rectangle()
-    .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
-    .frame(height: 1)
-    .offset(y: 4)
-    .foregroundColor(.blue)
-, alignment: .bottom)
+    .overlay(
+            Rectangle()
+                .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                .frame(height: 1)
+                .offset(y: 4)
+                .foregroundColor(.blue)
+    , alignment: .bottom)
 ```
 
 ## 📎 About
