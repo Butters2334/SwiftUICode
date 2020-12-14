@@ -33,8 +33,8 @@ TextField("请填入昵称", text: .constant(""))
 在[stackoverflow.com](https://stackoverflow.com/questions/57688242/swiftui-how-to-change-the-placeholder-color-of-the-textfield/61041398#61041398)找到两种解决方案:
 
 1. ZStack放一个Text在TextField下面,根据$text显示/隐藏
-    * 最后使用ViewModifier封装[Placeholder](/SwiftUICode/placeholder/PlaceholderSolution.swift)
-
+>最后使用ViewModifier封装[Placeholder](/SwiftUICode/placeholder/PlaceholderSolution.swift)
+>
     ```
     struct PlaceHolder<T: View>: ViewModifier {
         var placeHolder: T
@@ -61,7 +61,7 @@ TextField("请填入昵称", text: .constant(""))
 ## 📎 About
 
 * 以上示例中所涉及代码，针对于SwiftUI1.0系统API,部分问题在SwiftUI2.0中已经被修复。
-* 如果有遇到 SwiftUI 的其他痛点,请联系邮箱或直接提[**Issue**](https://github.com/Butters2334/SwiftUICode/issues/new) !
+* 如果有遇到 SwiftUI 的其他痛点,请联系邮箱或提出[**Issue**](https://github.com/Butters2334/SwiftUICode/issues/new) !
 * 如果本文示例内容有疏漏和错误之处，欢迎提 [**Issue**](https://github.com/Butters2334/SwiftUICode/issues/new) ！
 
 
