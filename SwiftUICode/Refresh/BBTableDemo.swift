@@ -9,7 +9,7 @@
 import SwiftUI
 import BBSwiftUIKit
 
-struct RefreshDemo: View {
+struct BBTableDemo: View {
     @State var list: [Int] = (0..<15).map {$0}
     @State var isRefreshing = false
     @State var isLoadingMore = false
@@ -51,8 +51,8 @@ struct RefreshDemo: View {
     }
 }
 
-struct RefreshDemo_Previews: PreviewProvider {
+struct BBTableDemo_Previews: PreviewProvider {
     static var previews: some View {
-        RefreshDemo()
+        BBTableDemo()
     }
 }

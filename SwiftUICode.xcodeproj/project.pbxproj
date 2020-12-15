@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4020077B2588A28B0033232B /* RefreshNavDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020077A2588A28B0033232B /* RefreshNavDemo.swift */; };
 		4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E10625873B1F0049E145 /* AppDelegate.swift */; };
 		4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E10825873B1F0049E145 /* SceneDelegate.swift */; };
 		4030E10B25873B1F0049E145 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E10A25873B1F0049E145 /* ContentView.swift */; };
@@ -25,11 +26,12 @@
 		4030E137258766E50049E145 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E136258766E50049E145 /* ActivityIndicator.swift */; };
 		4030E13A258861320049E145 /* LazyVStackDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E139258861320049E145 /* LazyVStackDemo.swift */; };
 		4030E13D2588980B0049E145 /* BBSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4030E13C2588980B0049E145 /* BBSwiftUIKit */; };
-		4030E14025889A7A0049E145 /* RefreshDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E13F25889A7A0049E145 /* RefreshDemo.swift */; };
+		4030E14025889A7A0049E145 /* BBTableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E13F25889A7A0049E145 /* BBTableDemo.swift */; };
 		4030E1432588A05A0049E145 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 4030E1422588A05A0049E145 /* SwiftUIPullToRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4020077A2588A28B0033232B /* RefreshNavDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshNavDemo.swift; sourceTree = "<group>"; };
 		4030E10325873B1F0049E145 /* SwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4030E10625873B1F0049E145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4030E10825873B1F0049E145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		4030E130258766650049E145 /* SimpleImageDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleImageDemo.swift; sourceTree = "<group>"; };
 		4030E136258766E50049E145 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4030E139258861320049E145 /* LazyVStackDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackDemo.swift; sourceTree = "<group>"; };
-		4030E13F25889A7A0049E145 /* RefreshDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshDemo.swift; sourceTree = "<group>"; };
+		4030E13F25889A7A0049E145 /* BBTableDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBTableDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,8 @@
 		4030E13E25889A710049E145 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
-				4030E13F25889A7A0049E145 /* RefreshDemo.swift */,
+				4030E13F25889A7A0049E145 /* BBTableDemo.swift */,
+				4020077A2588A28B0033232B /* RefreshNavDemo.swift */,
 			);
 			path = Refresh;
 			sourceTree = "<group>";
@@ -262,11 +265,12 @@
 			files = (
 				4030E12525874EA90049E145 /* PageViewSolution.swift in Sources */,
 				4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */,
-				4030E14025889A7A0049E145 /* RefreshDemo.swift in Sources */,
+				4030E14025889A7A0049E145 /* BBTableDemo.swift in Sources */,
 				4030E131258766660049E145 /* SDImgeDemo.swift in Sources */,
 				4030E127258753730049E145 /* HScrollViewController.swift in Sources */,
 				4030E13A258861320049E145 /* LazyVStackDemo.swift in Sources */,
 				4030E12A25875C170049E145 /* UnderlineSolution.swift in Sources */,
+				4020077B2588A28B0033232B /* RefreshNavDemo.swift in Sources */,
 				4030E137258766E50049E145 /* ActivityIndicator.swift in Sources */,
 				4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */,
 				4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */,

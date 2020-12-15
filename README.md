@@ -124,6 +124,10 @@ SwiftUI2的新特性LazyVStack可以实现动态加载视图,但是在SwifUI1.0�
 
 <h2 id="pullDownToRefresh">下拉刷新/上拉加载</h2>
 List和ScrollView并没有提供下拉刷新相关的api,需要使用第三方来实现
+>第三方[SwiftUIPullToRefresh](https://github.com/AppPear/SwiftUI-PullToRefresh),本地集成之后,使用[RefreshableNavigationView](/SwiftUICode/Refresh/RefreshNavDemo.swift)来代替List
+>第三方[BBSwiftUIKit](https://github.com/Silence-GitHub/BBSwiftUIKit),本地集成之后,使用[BBTableView](/SwiftUICode/Refresh/BBTableDemo.swift)来代替List
+
+RefreshNavDemo
 
 ## 📎 About
 
