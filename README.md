@@ -21,8 +21,9 @@
 - [PageView](#pageview)
 - [不可设置placeholder样式](#placeholder)
 - [下划线样式](#underline)
-- [下拉刷新/上拉加载]()
-- [WebImage](webimage)
+- [下拉刷新/上拉加载](#pullDownToRefresh)
+- [WebImage](#webimage)
+- [LazyVStack](#LazyVStack)
 
 
 <h2 id="xcode12">Xcode12</h2>
@@ -117,6 +118,12 @@ Text("自定义样式")
 
 >第三方[Kingfisher](https://github.com/onevcat/Kingfisher),本地集成之后,使用KFImage来代替Image实现
 
+<h2 id="LazyVStack">LazyVStack</h2>
+SwiftUI2的新特性LazyVStack可以实现动态加载视图,但是在SwifUI1.0并没有这样的功能
+
+
+<h2 id="pullDownToRefresh">下拉刷新/上拉加载</h2>
+List和ScrollView并没有提供下拉刷新相关的api,需要使用第三方来实现
 
 ## 📎 About
 

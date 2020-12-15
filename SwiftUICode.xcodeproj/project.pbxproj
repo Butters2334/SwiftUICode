@@ -23,6 +23,10 @@
 		4030E132258766660049E145 /* SimpleImageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E130258766650049E145 /* SimpleImageDemo.swift */; };
 		4030E135258766960049E145 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4030E134258766960049E145 /* SDWebImageSwiftUI */; };
 		4030E137258766E50049E145 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E136258766E50049E145 /* ActivityIndicator.swift */; };
+		4030E13A258861320049E145 /* LazyVStackDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E139258861320049E145 /* LazyVStackDemo.swift */; };
+		4030E13D2588980B0049E145 /* BBSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4030E13C2588980B0049E145 /* BBSwiftUIKit */; };
+		4030E14025889A7A0049E145 /* RefreshDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E13F25889A7A0049E145 /* RefreshDemo.swift */; };
+		4030E1432588A05A0049E145 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 4030E1422588A05A0049E145 /* SwiftUIPullToRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,8 @@
 		4030E12F258766650049E145 /* SDImgeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDImgeDemo.swift; sourceTree = "<group>"; };
 		4030E130258766650049E145 /* SimpleImageDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleImageDemo.swift; sourceTree = "<group>"; };
 		4030E136258766E50049E145 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		4030E139258861320049E145 /* LazyVStackDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackDemo.swift; sourceTree = "<group>"; };
+		4030E13F25889A7A0049E145 /* RefreshDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4030E135258766960049E145 /* SDWebImageSwiftUI in Frameworks */,
+				4030E13D2588980B0049E145 /* BBSwiftUIKit in Frameworks */,
+				4030E1432588A05A0049E145 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,8 @@
 		4030E10525873B1F0049E145 /* SwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				4030E13E25889A710049E145 /* Refresh */,
+				4030E138258861200049E145 /* lazy */,
 				4030E12E258766400049E145 /* WebImage */,
 				4030E12B25875FB80049E145 /* storage */,
 				4030E12825875C060049E145 /* underline */,
@@ -152,6 +162,22 @@
 			path = WebImage;
 			sourceTree = "<group>";
 		};
+		4030E138258861200049E145 /* lazy */ = {
+			isa = PBXGroup;
+			children = (
+				4030E139258861320049E145 /* LazyVStackDemo.swift */,
+			);
+			path = lazy;
+			sourceTree = "<group>";
+		};
+		4030E13E25889A710049E145 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				4030E13F25889A7A0049E145 /* RefreshDemo.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +196,8 @@
 			name = SwiftUICode;
 			packageProductDependencies = (
 				4030E134258766960049E145 /* SDWebImageSwiftUI */,
+				4030E13C2588980B0049E145 /* BBSwiftUIKit */,
+				4030E1422588A05A0049E145 /* SwiftUIPullToRefresh */,
 			);
 			productName = SwiftUICode;
 			productReference = 4030E10325873B1F0049E145 /* SwiftUICode.app */;
@@ -201,6 +229,8 @@
 			mainGroup = 4030E0FA25873B1F0049E145;
 			packageReferences = (
 				4030E133258766960049E145 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				4030E13B2588980B0049E145 /* XCRemoteSwiftPackageReference "BBSwiftUIKit" */,
+				4030E1412588A05A0049E145 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
 			);
 			productRefGroup = 4030E10425873B1F0049E145 /* Products */;
 			projectDirPath = "";
@@ -232,8 +262,10 @@
 			files = (
 				4030E12525874EA90049E145 /* PageViewSolution.swift in Sources */,
 				4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */,
+				4030E14025889A7A0049E145 /* RefreshDemo.swift in Sources */,
 				4030E131258766660049E145 /* SDImgeDemo.swift in Sources */,
 				4030E127258753730049E145 /* HScrollViewController.swift in Sources */,
+				4030E13A258861320049E145 /* LazyVStackDemo.swift in Sources */,
 				4030E12A25875C170049E145 /* UnderlineSolution.swift in Sources */,
 				4030E137258766E50049E145 /* ActivityIndicator.swift in Sources */,
 				4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */,
@@ -444,6 +476,22 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		4030E13B2588980B0049E145 /* XCRemoteSwiftPackageReference "BBSwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Silence-GitHub/BBSwiftUIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+		4030E1412588A05A0049E145 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/SwiftUI-PullToRefresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -451,6 +499,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4030E133258766960049E145 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		4030E13C2588980B0049E145 /* BBSwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4030E13B2588980B0049E145 /* XCRemoteSwiftPackageReference "BBSwiftUIKit" */;
+			productName = BBSwiftUIKit;
+		};
+		4030E1422588A05A0049E145 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4030E1412588A05A0049E145 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -16,10 +16,18 @@ struct PageViewSolution: View {
             HScrollViewController(pageWidth: self.maxWidth, contentSize: CGSize(width: self.maxWidth*2, height: geometry.size.height),leftPercent:self.$leftPercent) {
                 HStack(spacing:0){
                     PageContentView(color1: .red, color2: .green)
-                        .frame(width:self.maxWidth)
+                        .frame(maxWidth:.infinity)
                     PageContentView(color1: .blue, color2: .pink)
-                        .frame(width:self.maxWidth)
+                        .frame(maxWidth:.infinity)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.red,lineWidth: 1)
+                        )
                 }
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.black,lineWidth: 1)
+                )
             }
         }
     }
@@ -29,11 +37,13 @@ fileprivate struct PageContentView : View {
     let color1 : Color
     let color2 : Color
     var body: some View {
-        List {
-            ForEach(0..<30){index in
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(height: 200)
-                    .foregroundColor(index%2==0 ? self.color1 : self.color2)
+        ScrollView{
+            VStack {
+                ForEach(0..<30){index in
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: 200)
+                        .foregroundColor(index%2==0 ? self.color1 : self.color2)
+                }
             }
         }
     }
