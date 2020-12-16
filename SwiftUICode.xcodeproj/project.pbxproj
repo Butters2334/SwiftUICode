@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400F521A2589B18E00C9B0B5 /* StackDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52192589B18E00C9B0B5 /* StackDemo.swift */; };
+		400F521C2589B1DD00C9B0B5 /* ListDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F521B2589B1DD00C9B0B5 /* ListDemo.swift */; };
+		400F521E2589B41400C9B0B5 /* ScrollViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F521D2589B41400C9B0B5 /* ScrollViewDemo.swift */; };
+		400F52202589B64F00C9B0B5 /* SectionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F521F2589B64F00C9B0B5 /* SectionDemo.swift */; };
+		400F52222589B94700C9B0B5 /* FormDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52212589B94700C9B0B5 /* FormDemo.swift */; };
+		400F52242589D25E00C9B0B5 /* NavigationViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52232589D25E00C9B0B5 /* NavigationViewDemo.swift */; };
+		400F52262589DAFF00C9B0B5 /* TabbedDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52252589DAFF00C9B0B5 /* TabbedDemo.swift */; };
+		400F52282589E2F600C9B0B5 /* PickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52272589E2F600C9B0B5 /* PickerDemo.swift */; };
+		400F522A2589E55B00C9B0B5 /* ActionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F52292589E55B00C9B0B5 /* ActionDemo.swift */; };
+		400F522C2589F06C00C9B0B5 /* ColorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F522B2589F06C00C9B0B5 /* ColorDemo.swift */; };
 		4020077B2588A28B0033232B /* RefreshNavDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4020077A2588A28B0033232B /* RefreshNavDemo.swift */; };
 		4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E10625873B1F0049E145 /* AppDelegate.swift */; };
 		4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030E10825873B1F0049E145 /* SceneDelegate.swift */; };
@@ -31,6 +41,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400F52192589B18E00C9B0B5 /* StackDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackDemo.swift; sourceTree = "<group>"; };
+		400F521B2589B1DD00C9B0B5 /* ListDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDemo.swift; sourceTree = "<group>"; };
+		400F521D2589B41400C9B0B5 /* ScrollViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDemo.swift; sourceTree = "<group>"; };
+		400F521F2589B64F00C9B0B5 /* SectionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDemo.swift; sourceTree = "<group>"; };
+		400F52212589B94700C9B0B5 /* FormDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemo.swift; sourceTree = "<group>"; };
+		400F52232589D25E00C9B0B5 /* NavigationViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewDemo.swift; sourceTree = "<group>"; };
+		400F52252589DAFF00C9B0B5 /* TabbedDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedDemo.swift; sourceTree = "<group>"; };
+		400F52272589E2F600C9B0B5 /* PickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDemo.swift; sourceTree = "<group>"; };
+		400F52292589E55B00C9B0B5 /* ActionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDemo.swift; sourceTree = "<group>"; };
+		400F522B2589F06C00C9B0B5 /* ColorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDemo.swift; sourceTree = "<group>"; };
 		4020077A2588A28B0033232B /* RefreshNavDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshNavDemo.swift; sourceTree = "<group>"; };
 		4030E10325873B1F0049E145 /* SwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4030E10625873B1F0049E145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400F52182589B17600C9B0B5 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				400F52192589B18E00C9B0B5 /* StackDemo.swift */,
+				400F521B2589B1DD00C9B0B5 /* ListDemo.swift */,
+				400F521F2589B64F00C9B0B5 /* SectionDemo.swift */,
+				400F52212589B94700C9B0B5 /* FormDemo.swift */,
+				400F52232589D25E00C9B0B5 /* NavigationViewDemo.swift */,
+				400F52252589DAFF00C9B0B5 /* TabbedDemo.swift */,
+				400F52272589E2F600C9B0B5 /* PickerDemo.swift */,
+				400F52292589E55B00C9B0B5 /* ActionDemo.swift */,
+				400F522B2589F06C00C9B0B5 /* ColorDemo.swift */,
+				400F521D2589B41400C9B0B5 /* ScrollViewDemo.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		4030E0FA25873B1F0049E145 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +123,7 @@
 		4030E10525873B1F0049E145 /* SwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				400F52182589B17600C9B0B5 /* Demo */,
 				4030E13E25889A710049E145 /* Refresh */,
 				4030E138258861200049E145 /* lazy */,
 				4030E12E258766400049E145 /* WebImage */,
@@ -263,16 +301,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400F521E2589B41400C9B0B5 /* ScrollViewDemo.swift in Sources */,
+				400F522A2589E55B00C9B0B5 /* ActionDemo.swift in Sources */,
+				400F521A2589B18E00C9B0B5 /* StackDemo.swift in Sources */,
 				4030E12525874EA90049E145 /* PageViewSolution.swift in Sources */,
 				4030E11F258743360049E145 /* PlaceholderSolution.swift in Sources */,
 				4030E14025889A7A0049E145 /* BBTableDemo.swift in Sources */,
+				400F52222589B94700C9B0B5 /* FormDemo.swift in Sources */,
 				4030E131258766660049E145 /* SDImgeDemo.swift in Sources */,
+				400F52242589D25E00C9B0B5 /* NavigationViewDemo.swift in Sources */,
+				400F52282589E2F600C9B0B5 /* PickerDemo.swift in Sources */,
 				4030E127258753730049E145 /* HScrollViewController.swift in Sources */,
 				4030E13A258861320049E145 /* LazyVStackDemo.swift in Sources */,
+				400F52202589B64F00C9B0B5 /* SectionDemo.swift in Sources */,
 				4030E12A25875C170049E145 /* UnderlineSolution.swift in Sources */,
+				400F522C2589F06C00C9B0B5 /* ColorDemo.swift in Sources */,
 				4020077B2588A28B0033232B /* RefreshNavDemo.swift in Sources */,
 				4030E137258766E50049E145 /* ActivityIndicator.swift in Sources */,
+				400F521C2589B1DD00C9B0B5 /* ListDemo.swift in Sources */,
 				4030E10725873B1F0049E145 /* AppDelegate.swift in Sources */,
+				400F52262589DAFF00C9B0B5 /* TabbedDemo.swift in Sources */,
 				4030E10925873B1F0049E145 /* SceneDelegate.swift in Sources */,
 				4030E12D25875FCD0049E145 /* StorageDemo.swift in Sources */,
 				4030E132258766660049E145 /* SimpleImageDemo.swift in Sources */,
