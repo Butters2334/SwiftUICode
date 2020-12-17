@@ -9,63 +9,118 @@
 import SwiftUI
 
 struct ActionDemo: View {
-    @State var showAlert = false
-    @State var showActionSheet = false
-    @State var showModalView = false
-    @State var showPop = false
-    func label(_ text:String)->() -> Text{
-        {
-            Text(text).setButtonStyle()
-        }
-    }
+    @State var pop = false
     var body: some View {
         VStack{
-            Button(action: {
-                self.showAlert = true
-            },label: label("show alert"))
-            .alert(isPresented: $showAlert){
-                AlertView.show()
+            AlertButton(Text("show alert").setButtonStyle(), title: Text("title"), message: Text("Message"), buttons: [
+                        .cancel(Text("取消")),
+                        .destructive(Text("警告样式"))
+            ])
+            
+            ActionSheetButton(Text("show action").setButtonStyle(),
+                              title: Text("title"),
+                              message: Text("message"),
+                              buttons: [
+                                  .default(Text("默认样式"), action: {
+                                      print("default")
+                                  }),
+                                  .destructive(Text("警告样式"), action: {
+                                      print("destructive")
+                                  }),
+                                  .cancel(Text("关闭样式"), action: {
+                                      print("cancel")
+                                  })
+                              ])
+            
+            SheetButton(Text("show modalView").setButtonStyle()) {
+                Text("modalView")
+                    .bold()
+                    .font(.system(size: 50))
             }
             
             Button(action: {
-                self.showActionSheet = true
+                self.pop = true
             }) {
-                Text("show action").setButtonStyle()
-           }.actionSheet(isPresented: $showActionSheet) {
-                ActionSheetView.show()
+                Text("Pop").setButtonStyle()
+            }.popover(isPresented: $pop) {
+                Text("popView")
+                    .bold()
+                    .font(.system(size: 50))
             }
-            
-            Button(action: {
-                self.showModalView = true
-            }) {
-                Text("show modalView").setButtonStyle()
-            }.sheet(isPresented: $showModalView) {
-                ModalView()
-            }
-            
-//            ActionButton{
-//                Text("ActionButton").setButtonStyle()
-//            }
-//            .showActionSheet {
-//                ModalView()
-//            }
         }
     }
 }
 
-struct ActionButton<ActionView>: View where ActionView:View{
-    let label:()->Text
-    @State var isPresented = false
+struct AlertButton: View{
+    let buttonLabel:Text
+    let title: Text
+    var message: Text? = nil
+    var buttons: [Alert.Button] = [.cancel()]
+    init(_ label:Text,title:Text,message:Text?=nil,buttons: [ActionSheet.Button] = [.cancel()]) {
+        self.buttonLabel = label
+        self.title = title
+        self.message = message
+        self.buttons = buttons
+    }
+    @State private var isPresented = false
     var body: some View{
         Button(action: {
             self.isPresented = true
-        },label:label)
-        .sheet(isPresented: $isPresented){
-                ModalView()
+        },label:{buttonLabel})
+            .alert(isPresented: $isPresented){
+                if buttons.count >= 2 {
+                    return Alert(
+                                title:title,
+                                message:message,
+                                primaryButton: buttons[0],
+                                secondaryButton: buttons[1])
+                }else{
+                    return Alert(
+                                title:title,
+                                message:message,
+                                dismissButton: buttons[0])
+                }
         }
     }
-    func showActionSheet(_ action:@escaping ()->ActionView)->some View{
-        self.sheet(isPresented: $isPresented,content: {ModalView()})
+}
+
+
+struct ActionSheetButton: View{
+    let buttonLabel:Text
+    let title: Text
+    var message: Text? = nil
+    var buttons: [ActionSheet.Button] = [.cancel()]
+    init(_ label:Text,title:Text,message:Text?=nil,buttons: [ActionSheet.Button] = [.cancel()]) {
+        self.buttonLabel = label
+        self.title = title
+        self.message = message
+        self.buttons = buttons
+    }
+    @State private var isPresented = false
+    var body: some View{
+        Button(action: {
+            self.isPresented = true
+        },label:{buttonLabel})
+            .actionSheet(isPresented: $isPresented){
+                ActionSheet(title:title, message:message, buttons:buttons)
+        }
+    }
+}
+
+struct SheetButton<Content>: View where Content : View{
+    let label:Text
+    let content:()->Content
+    init(_ label:Text,content:@escaping ()->Content) {
+        self.label = label
+        self.content = content
+    }
+    @State private var isPresented = false
+    var body: some View{
+        Button(action: {
+            self.isPresented = true
+        },label:{label})
+        .sheet(isPresented: $isPresented,
+               content: self.content)
     }
 }
 
@@ -75,31 +130,6 @@ extension Text{
             .foregroundColor(.randomColor)
             .bold()
             .font(.system(size:50))
-    }
-}
-
-struct AlertView {
-    static func show()->Alert{
-        Alert(
-            title:Text("title"),
-            message:Text("message"),
-            primaryButton: .default(Text("default")),
-            secondaryButton: .cancel())
-    }
-}
-struct ActionSheetView {
-    static func show()->ActionSheet{
-        ActionSheet(title: Text("title"), message: Text("message"), buttons: [
-            .default(Text("default"), action: {
-                print("default")
-            }),
-            .destructive(Text("destructive"), action: {
-                print("destructive")
-            }),
-            .cancel(Text("cancel"), action: {
-                print("cancel")
-            })
-        ])
     }
 }
 
